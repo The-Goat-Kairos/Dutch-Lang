@@ -5,24 +5,30 @@
 typedef enum {
     TOKEN_EINDE = 0,
     TOKEN_ONGELDIG,
+    TOKEN_TEDOEN,
 
     TOKEN_IDENT,
     TOKEN_STRING,
     TOKEN_GETALLEN,             // Only integers supported right now
+    TOKEN_WAAR,
+    TOKEN_VALS,
 
     TOKEN_INT,
     TOKEN_GEZELLIGHEID,         //gezelligheid
     TOKEN_GEEFTERUG,            //geefterug
-    TOKEN_ALS,                  //als
+    TOKEN_ALS,                  //als // als (...) dan { ... }
+    TOKEN_DAN,                  //dan
+    TOKEN_ANDERS,               //anders
     TOKEN_ZOLANG,               //zolang
 
     TOKEN_LPAREN,               //(
     TOKEN_RPAREN,               //)
-    TOKEN_LBRACE,               //{
-    TOKEN_RBRACE,               //}
+    TOKEN_LKRULHAAK,            //{
+    TOKEN_RKRULHAAK,            //}
     TOKEN_PUNTKOMMA,            //;
     TOKEN_KOMMA,                //,
     TOKEN_TOEWIJZEN,            //=
+    TOKEN_HEKJE,                //# // schrijf("#{variabele}")
 
     TOKEN_KLEINER,              //<
     TOKEN_GROTER,               //>
@@ -39,8 +45,8 @@ typedef enum {
     TOKEN_MODULO,               //%
     TOKEN_PLUS,                 //+
     TOKEN_PLUSPLUS,             //++
-    TOKEN_MINUS,                //-
-    TOKEN_MINUSMINUS,           //--
+    TOKEN_MIN,                  //-
+    TOKEN_MINMIN,               //--
     TOKEN_KEER,                 //*
     TOKEN_DELEN,                ///
 } Token_Type;

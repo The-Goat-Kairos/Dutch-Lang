@@ -3,7 +3,7 @@ int hoofdfunctie() {
 
     int teller = 0;
     zolang (teller < 42) {
-        als (teller % 3 == 0) {
+        als (teller % 3 == 0) dan {
             schrijf("Getal #{teller}!\n");
         }
         teller = teller + 1;
