@@ -3,52 +3,50 @@
 #define LEXER_H_
 
 typedef enum {
-    TOKEN_EINDE = 0,
+    TOKEN_EINDE_PROGRAMMA = 0,
     TOKEN_ONGELDIG,
     TOKEN_TEDOEN,
 
     TOKEN_IDENT,
     TOKEN_STRING,
-    TOKEN_GETALLEN,             // Only integers supported right now
-    TOKEN_WAAR,
-    TOKEN_VALS,
+    TOKEN_GETALLEN,             // Alleen gehele getallen tot nu toe
+    TOKEN_WAAR,                 // waar (= true)
+    TOKEN_VALS,                 // vals (= false)
 
-    TOKEN_INT,
-    TOKEN_GEZELLIGHEID,         //gezelligheid
-    TOKEN_GEEFTERUG,            //geefterug
-    TOKEN_ALS,                  //als // als (...) dan { ... }
-    TOKEN_DAN,                  //dan
-    TOKEN_ANDERS,               //anders
-    TOKEN_ZOLANG,               //zolang
+    TOKEN_GEHEEL,               // Gehele getallen (= integers)
+    TOKEN_GEEFTERUG,            // geefterug (= return)
+    TOKEN_ALS,                  // als // als (...) dan ... anders ... einde
+    TOKEN_DAN,                  // dan
+    TOKEN_ANDERS,               // anders
+    TOKEN_EINDE,                // einde
+    TOKEN_ZOLANG,               // zolang // zolang (...) dan ... einde
 
-    TOKEN_LPAREN,               //(
-    TOKEN_RPAREN,               //)
-    TOKEN_LKRULHAAK,            //{
-    TOKEN_RKRULHAAK,            //}
-    TOKEN_PUNTKOMMA,            //;
-    TOKEN_KOMMA,                //,
-    TOKEN_TOEWIJZEN,            //=
-    TOKEN_HEKJE,                //# // schrijf("#{variabele}")
+    TOKEN_LPAREN,               // (
+    TOKEN_RPAREN,               // )
+    // TOKEN_LKRULHAAK,            // {
+    // TOKEN_RKRULHAAK,            // }
+    TOKEN_PUNTKOMMA,            // ;
+    TOKEN_KOMMA,                // ,
+    TOKEN_TOEWIJZEN,            // =
+    TOKEN_HEKJE,                // # // schrijf("#{variabele}") voor variabele substitutie
 
-    TOKEN_KLEINER,              //<
-    TOKEN_GROTER,               //>
-    TOKEN_GELIJK_AAN,           //==
-    TOKEN_NIET_GELIJK_AAN,      //!=
-    TOKEN_PLUS_GELIJK_AAN,      //+=
-    TOKEN_MINUS_GELIJK_AAN,     //+=
-    TOKEN_OF,                   //|
-    TOKEN_EN,                   //&
-    TOKEN_XOR,                  //^
-    TOKEN_OFOF,                 //||
-    TOKEN_ENEN,                 //&&
+    TOKEN_KLEINER,              // <
+    TOKEN_GROTER,               // >
+    TOKEN_GELIJK_AAN,           // ==
+    TOKEN_NIET_GELIJK_AAN,      // !=
+    TOKEN_PLUS_GELIJK_AAN,      // +=
+    TOKEN_MINUS_GELIJK_AAN,     // +=
+    TOKEN_OF,                   // |
+    TOKEN_EN,                   // &
+    TOKEN_XOR,                  // ^
+    TOKEN_OFOF,                 // ||
+    TOKEN_ENEN,                 // &&
 
-    TOKEN_MODULO,               //%
-    TOKEN_PLUS,                 //+
-    TOKEN_PLUSPLUS,             //++
-    TOKEN_MIN,                  //-
-    TOKEN_MINMIN,               //--
-    TOKEN_KEER,                 //*
-    TOKEN_DELEN,                ///
+    TOKEN_MODULO,               // %
+    TOKEN_PLUS,                 // +
+    TOKEN_MIN,                  // -
+    TOKEN_KEER,                 // *
+    TOKEN_DELEN,                // /
 } Token_Type;
 
 typedef struct {
